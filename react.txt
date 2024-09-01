@@ -1,0 +1,92 @@
+in first lecture
+Created a react app. Or a react software or folder.
+2.	We saw/read the package.json file of it.
+3.	After reading that file, we executed the react app (start) also build it using the command given inside that package file.
+4.	Now, created a vite react folder (vite = library). 
+5.	Also, saw the package.json file for vite.
+6.	Then executed the vite folder i.e. dev  (start).
+7.	Now, after executing both the folder, we removed un-useful file from both.
+8.	Then, Executed our first react and vite programme.
+
+in second lecture
+1. when making components, always capitalize name(function).
+2. file extension .jsx , bcz some libraries force us for that
+3. return only 1 components
+=> In react we will make our own custom tags (Eg <Chai/>) 
+
+
+=> In vite it will directly inject main.jsx in index.html file 
+
+=> Vite is lightweight.
+
+=> Remember that components name start from capital letters which is best practices
+
+in third lecture
+Learnings:-
+1) For Custom React (BTS of React) - in HTML  create div attach js , In JS - get that div and create our own custom Element(as like react sees element)  then for rendering we create a custom render methods which create the element in HTML and injects it in the div or container
+
+in fourth lecture
+et [value, setValue] = useState(0)
+ const addValue = () => {
+  if (value == 20){
+    setValue(value = 20)
+  }
+  else{
+    setValue(value+1)
+  }
+    
+  }
+  
+  const removeValue = () => {
+    if (value > 0){
+      setValue(value - 1)
+    }
+    else{
+      setValue(value = 0)
+    }
+   
+  }
+This is the whole solution !
+
+in fifth lecture
+1.The createRoot create's its own DOM and then compare it with the web browser's DOM and only update those components which are actually updated.
+2.But the browser removes the whole DOM and then recrates the whole DOM with the updated values this is called reload.
+3. However virtual DOM tracks whole DOM like a tree like structure and updates only those values which were only changed.
+4. But some values depends on network call so if we update a value it might get update immediately via a network call.
+5. So we will have to update it again. To avoid this overhead we can drop the updation calls for the immediate value update.
+6. The current algo used by the React is called the React Fibre algo.
+7. The algo react uses to differentiate the web browser's tree and React's tree formed through create root is called reconciliation.
+8. Reconciliation is the algo behind what popularly known as the Virtual-DOM.
+9.In UI it is not necessary for every update to be applied immediately. */
+
+in sixth lecture
+React props -: to send data from one component to another.
+
+Props are sent inside the component brackets.
+eg. <Card channel = "chaiaurcode"/> 
+1 Always use curly brackets for a variable { variableName } to send it as props.
+Props can be in any form but passed as a variable.
+eg. <Card username = "chaiaurcode"/> 
+eg. <Card object = "myobject"/> 
+eg. <Card array = "myarray"/> 
+
+2 props send the data in the object form to the component.
+so to access ->
+                   props.properties or {properties ="defaultValue if props doesn't receive any value"}
+eg.props.username
+Not like strings only, you can pass any valid javascript data types through props. If you use Next Js, then data should be centralised.
+
+in seventh lecture
+
+Detailed explaination of why does first syntax only updates the count once:
+Initial State: Assume count is initially 69.
+First Call: setCount(count + 1) schedules a state update to set count to 70 (69 + 1).
+Second Call: setCount(count + 1) schedules another state update to set count to 70 (69 + 1), because count is still 69 in this scope.
+Third Call: setCount(count + 1) schedules yet another state update to set count to 70 (69 + 1), again because count is still 69 in this scope.
+
+In case of functional updater syntax React ensures that changes are made to the latest state of the count hence each function gets access to the latest state of the count variable:
+First Call: setCount(count =>count+1) schedules a state update to set count to 70
+Second Call : schedules a state update to set count to (70+1) because count is now 70 in this scope and so on...
+
+in eight lecture
+
