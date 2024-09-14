@@ -76,8 +76,8 @@
 
 // export default App
 import { useState } from 'react'
-import {InputBox} from './components'
-import useCurrencyInfo from './customhooks/useCurrencyInfo'
+import {InputBox} from './components/index'
+import useCurrencyInfo from './customhooks/usecurrencyinfo'
 
 
 function App() {
@@ -124,14 +124,14 @@ function App() {
                             label="From"
                             amount={amount}
                             currencyOptions={options}
-                            onCurrencyChange={(currency) => setAmount(amount)}
-                            selectCurrency={from}
+                            onCurrencyChange={(currency) => setFrom(currency)}
+                            selectCurrency={to}
                             onAmountChange={(amount) => setAmount(amount)}
                         />
                     </div>
                     <div className="relative w-full h-0.5">
                         <button
-                            type="button"
+                            type="text"
                             className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
                             onClick={swap}
                         >
