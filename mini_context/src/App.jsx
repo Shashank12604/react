@@ -9,7 +9,7 @@ function App() {
   return (
     
       <UserContextProvider>
-        <h1>chai with shanks</h1>
+        <h1>chai with kaistha sir</h1>
         <Login/>
         <Profile/>
         
