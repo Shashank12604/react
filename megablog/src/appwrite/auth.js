@@ -7,14 +7,14 @@ export class AuthService {
     account;
     constructor(){
         this.client
-            .setEndpoint(conf.appwriteUrl)
+            .setEndpoint('https://cloud.appwrite.io/v1')
             .setProject(conf.appwriteProjectID)
         this.account = new Account(this.client);
     }
 
     async createAccount({email,password,name}){
         try{
-            const userAccount = await this.account.create(ID.unique(),email,password.name);
+            const userAccount = await this.account.create(ID.unique(),email,password,name);
             if(userAccount){
                 return this.login({email,password});
             }else{
